@@ -9,7 +9,6 @@ $users = [
 if (isset($_POST['key'])) {
     $key = $_POST['key'];
     $userId = $_POST['userId'];
-    file_put_contents('userlist.txt', $key.'=>'.$userId);
     $user = "/
 '$key'=>'$userId',/";
     $str = file_get_contents($site, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
